@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  border: 0;
+  list-style: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+.container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+@media screen and (max-width: 480px) {
+  .main_body {
+    background: red;
+    display: grid;
+    width: 100vw;
+    height: 200vh;
+    /* grid-template-columns:  ; */
+    grid-template-rows: 35% 52% 13%;
+    grid-template-areas: "per" "cent" "age";
+  }
+  .main_grid_first {
+    grid-area: per;
+    background: palevioletred;
+    display: grid;
+    grid-template-rows: 70% 15% 15%;
+    grid-template-areas: "per" "cent" "age";
+  }
+  .grid_first_main {
+    grid-area: per;
+    background: red;
+  }
+  .grid_second_main {
+    grid-area: cent;
+    background: green;
+  }
+  .grid_second_main {
+    grid-area: age;
+    background: blue;
+  }
+  .main_grid_second {
+    grid-area: cent;
+    background: yellow;
+  }
+  .main_grid_third {
+    grid-area: age;
+    background: green;
+  }
+}

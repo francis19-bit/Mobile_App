@@ -1,0 +1,285 @@
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  border: 0;
+  list-style: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+.container {
+  margin: 0 auto;
+  width: 90%;
+}
+.inputbox {
+  position: relative;
+  width: 196px;
+}
+
+.inputbox input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
+}
+
+.inputbox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 10px 10px;
+  font-size: 1em;
+  color: #8f8f8f;
+  letter-spacing: 00.05em;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.loader {
+  width: 8px;
+  height: 8px;
+  background: #9b99b6;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotationBack 1s ease-in-out infinite reverse;
+}
+
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  transform: rotate(45deg);
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #9b99b6;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: rgb(0, 0, 0);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.inputbox input:valid ~ span,
+.inputbox input:focus ~ span {
+  color: #5748f2;
+  transform: translateX(-10px) translateY(-34px);
+  font-size: 0, 75em;
+}
+
+.inputbox i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #5748f2;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.inputbox input:valid ~ i,
+.inputbox input:focus ~ i {
+  height: 44px;
+}
+.temp {
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+}
+.temp h1 {
+  padding: 50px;
+  font-size: 30px;
+}
+.temp h3 {
+  padding: 20px;
+  font-size: 20px;
+}
+.temp h3 span {
+  color: rgb(70, 70, 145);
+}
+.temp h3 span {
+  font-variant: small-caps;
+  color: rgb(70, 70, 145);
+  /* font-size: 10px; */
+}
+
+/* .run {
+  display: flex;
+  text-align: center;
+} */
+
+@media screen and (max-width: 480px) {
+  .body {
+    /* background: #fff; */
+    display: grid;
+    width: 100%;
+    height: 200vh;
+    /* grid-template-columns:  ; */
+    grid-template-rows: 25% 62% 13%;
+    grid-template-areas: "per" "cent" "age";
+  }
+  /* ===============**Header**============ */
+  .header {
+    grid-area: per;
+    /* background: red; */
+    background-image: url(../src/Images/healthy-vegetable-soup-cooked-with-fresh-meat-generated-by-ai.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    /* grid-template-columns: ; */
+    grid-template-rows: 10% 70% 20%;
+    grid-template-areas: "per" "cent" "age";
+  }
+  .head-containerII {
+    grid-area: cent;
+    /* height: 10vh; */
+    width: 100%;
+    /* background: rgba(116, 94, 94, 0.5); */
+    /* background: #9b99b6; */
+  }
+  .head-containerIII {
+    grid-area: age;
+    /* height: 10vh; */
+    width: 100%;
+    /* background: brown; */
+  }
+  .head-containerI {
+    grid-area: per;
+    background: paleturquoise;
+    /* height: 8vh; */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    /* z-index: 11; */
+  }
+  .nav_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .chill span {
+    color: rgb(70, 70, 145);
+    font-size: 2rem;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 0.8em;
+  }
+  .menu li {
+    transition: all 1s ease;
+    cursor: pointer;
+    width: 100%;
+    height: 1.8rem;
+  }
+  .btn {
+    position: relative;
+    top: -20px;
+  }
+
+  .menu li:hover {
+    color: chocolate;
+  }
+  .ul ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 40px;
+  }
+  .ul ul li {
+    padding: 10px;
+  }
+  /* =================////=== */
+
+  .works {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .works div {
+    padding: 12px;
+  }
+  .work_list ul {
+    display: flex;
+    text-align: center;
+  }
+
+  /* ===============**Main**============ */
+  .main {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-image: url(../src/Images/head-cook-throwing-fresh-chopped-herbs-pan-improve-taste-meal-while-professional-kitchen-master-chef-seasoning-dish-prepared-food-contest-held-fine-dining-restaurant.jpg); */
+    grid-area: cent;
+    background: rgb(34, 26, 26);
+    display: grid;
+    /* grid-template-columns:  */
+    grid-template-rows: 30% 50% 20%;
+    grid-template-areas: "per" "cent" "age";
+  }
+  .main-containerI {
+    grid-area: per;
+    /* background: pink; */
+    /* height: 5vh; */
+  }
+  .main-containerII {
+    grid-area: cent;
+    /* background: red; */
+  }
+  .main-containerIII {
+    grid-area: age;
+    /* background: blueviolet; */
+  }
+  .main-containerIIII {
+    grid-area: gee;
+    background: green;
+  }
+  .inbox:hover {
+    box-shadow: #23242a;
+    background: #5748f2;
+  }
+  /* =================////=== */
+
+  /* ===============**Main**============ */
+  .footer {
+    grid-area: age;
+    background: #8f8f8f;
+  }
+}
