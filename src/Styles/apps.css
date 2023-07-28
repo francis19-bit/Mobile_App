@@ -19,7 +19,7 @@
   .main_body {
     background: red;
     display: grid;
-    width: 100vw;
+    width: 100%;
     height: 200vh;
     /* grid-template-columns:  ; */
     grid-template-rows: 35% 52% 13%;

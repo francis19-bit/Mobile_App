@@ -2,6 +2,8 @@ import React from "react";
 import "../Styles/apps.css";
 import FixedCard from "./FixedCard";
 import ClickableLink from "./ClickableLink";
+import SoloText from "./SoloText";
+import Home from "../Home";
 
 const Apps = () => {
   return (
@@ -11,9 +13,15 @@ const Apps = () => {
           <div className="grid_first_main">
             <FixedCard />
           </div>
-          <div className="grid_second_main">
-            {" "}
-            <SoloText />{" "}
+          <div
+            className="grid_second_main"
+            style={{
+              display: "flex",
+              placeItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <SoloText />
           </div>
           <div className="grid_third_main">
             <div>
@@ -38,7 +46,10 @@ const Apps = () => {
           </div>
         </div>
         <div className="main_grid_second"></div>
-        <div className="main_grid_third"></div>
+        <div className="main_grid_third">
+          {" "}
+          <Home />{" "}
+        </div>
       </div>
     </>
   );
